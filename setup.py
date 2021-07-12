@@ -5,7 +5,8 @@ setup(name='gym_tacto',
       description='Environments for robotic manipulation',
       author='Erick Rosete Beas',
       author_email='erickrosetebeas@hotmail.com',
-      install_requires=['gym'
+      install_requires=['hydra.core(>=1.0.6)',
+                        'gym',
                         'pybulletX',
                         'tacto']
 )

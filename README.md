@@ -1,4 +1,4 @@
-# Gym Sawyer 
+# Gym Tacto 
 Set of PyBullet environmentS for robotic manipulation that can use tactile information
 
 ## Sawyer Peg Environment

@@ -1,0 +1,11 @@
+defaults:
+  - env: sawyer_peg_env
+
+show_gui: True
+with_noise: False
+with_force: False
+visualize_tacto: False
+with_tactile_sensor: False
+dt: 0.005
+reward: "dense"
+difficulty: "hard"

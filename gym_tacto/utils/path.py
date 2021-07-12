@@ -1,5 +1,5 @@
-import gym_sawyer
-from pathlib                 import Path
+import gym_tacto
+from pathlib import Path
 
 
 def pkg_path(rel_path):
@@ -13,4 +13,4 @@ def pkg_path(rel_path):
     Returns:
         str: Global path.
     """
-    return str(Path(gym_sawyer.__path__[0], rel_path))
+    return str(Path(gym_tacto.__path__[0], rel_path))

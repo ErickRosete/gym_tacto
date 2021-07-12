@@ -1,7 +1,7 @@
-from drlfads.utils.gym_utils import make_env
 import hydra
+from gym_tacto.utils.gym_utils import make_env
 
-@hydra.main(config_path="../config", config_name="sac_config")
+@hydra.main(config_path="../config", config_name="env_test")
 def env_test(cfg):
     env = make_env(cfg.env.name, cfg.env)
     for episode in range(100):
