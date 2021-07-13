@@ -1,0 +1,27 @@
+defaults:
+  - sawyer_base_env
+  - cameras: 
+    - view_1
+    - view_2
+
+name: sawyer_door_v0
+
+settings:
+  random_obj_position: True
+  max_episode_steps: 1000
+observation:
+  with_gripper_width: True
+action:
+  with_gripper_width: True
+sawyer_gripper:
+  init_state:
+    gripper_width: 0.090
+debug_camera:
+  cameraDistance: 1.0
+  cameraYaw: -20.
+objects:
+  door:
+    urdf_path: "data/door/urdf/door.urdf"
+    base_position: [0.70, 0., 0.25]
+    base_orientation: [ 0, 0, -0.7071068, 0.7071068 ]
+    use_fixed_base: True

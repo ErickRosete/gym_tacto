@@ -44,7 +44,7 @@ class SawyerPegEnv(gym.Env):
         mode = p.GUI if self.show_gui else p.DIRECT
         client_id = px.init(mode=mode) 
         self.physics_client = px.Client(client_id=client_id)
-        p.resetDebugVisualizerCamera(**cfg.pybullet_camera)
+        p.resetDebugVisualizerCamera(**cfg.debug_camera)
         p.setTimeStep(1/self.simulation_frequency)
     
     @staticmethod

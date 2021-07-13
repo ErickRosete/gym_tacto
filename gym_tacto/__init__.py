@@ -11,3 +11,9 @@ register(
     entry_point='gym_tacto.envs:SawyerPegV1',
     max_episode_steps=500
 )
+
+register(
+    id='sawyer-door-v0',
+    entry_point='gym_tacto.envs:SawyerDoorV0',
+    max_episode_steps=500
+)

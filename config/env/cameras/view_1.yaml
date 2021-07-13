@@ -1,0 +1,10 @@
+view_1:
+  name: view_1
+  fov: 45
+  aspect: 1
+  nearval: 0.01
+  farval: 2
+  width: 200
+  height: 200
+  look_at: [ 0.5, 0.7, -0.5 ]
+  look_from: [ 0.85, -0.75, 1.0]

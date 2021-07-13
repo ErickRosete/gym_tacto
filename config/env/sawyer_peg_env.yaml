@@ -2,3 +2,13 @@ defaults:
   - sawyer_base_env
 
 name: sawyer_peg_v1
+
+objects:   
+  board:
+    urdf_path: "data/peg_in_hole_board/peg_in_hole_board.urdf"
+  cylinder:
+    urdf_path: "data/cylinder/cylinder.urdf"
+  hexagonal_prism:
+    urdf_path: "data/hexagonal_prism/hexagonal_prism.urdf"
+  square_prism:
+    urdf_path: "data/square_prism/square_prism.urdf"

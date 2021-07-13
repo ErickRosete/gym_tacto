@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+  <robot name="door">
+
+    <link name="door_handle_link">
+      <inertial>
+        <origin xyz="-0.0349 -0.002 0.051" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.0398" ixy="0.0121" ixz="0.001" iyy="0.0411" iyz="-0.0045" izz="0.005"/>
+      </inertial>
+      <visual name="handle">
+        <origin xyz="-0.0949 -0.252 0" rpy="0 0 0.0203"/>
+        <geometry>
+          <mesh filename="../meshes/dae/handle.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="mat_02"/>
+      </visual>
+      <collision name="handle">
+        <origin xyz="-0.0331 -0.0005 0.0498" rpy="0 0 0.0203"/>
+        <geometry>
+          <box size="0.0749 0.0149 0.0244"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="frame_door_link">
+      <inertial>
+        <origin xyz="0.155 -0.03 -0.14" rpy="0 0 0"/>
+        <mass value="1.0"/>
+        <inertia ixx="0.0816" ixy="0.0005" ixz="0.0001" iyy="0.0891" iyz="-0.0014" izz="0.0078"/>
+      </inertial>
+      <visual name="door">
+        <origin xyz="0.155 -0.03 0.11" rpy="-1.5708 0 0"/>
+        <geometry>
+          <mesh filename="../meshes/dae/door.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="mat_01"/>
+      </visual>
+      <collision name="door">
+        <origin xyz="0.155 -0.0249 -0.141" rpy="-1.5708 0 0"/>
+        <geometry>
+          <box size="0.2985 0.5 0.0366"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="root">
+      <inertial>
+        <origin xyz="0 0 0.225" rpy="0 0 0"/>
+        <mass value="0.75"/>
+        <inertia ixx="0.0808" ixy="0.0002" ixz="0" iyy="0.0915" iyz="0" izz="0.011"/>
+      </inertial>
+      <visual name="frame">
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <mesh filename="../meshes/dae/frame.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="mat_01"/>
+      </visual>
+      <collision name="frame">
+        <origin xyz="0 0 0.276" rpy="1.5708 0 0"/>
+        <geometry>
+          <box size="0.3972 0.552 0.0479"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="door_handle_link" type="revolute">
+      <origin xyz="0.255 -0.03 -0.14" rpy="-1.5708 0 0"/>
+      <parent link="frame_door_link"/>
+      <child link="door_handle_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="0" upper="0.7" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="frame_door_link" type="revolute">
+      <origin xyz="-0.155 -0.03 0.11" rpy="3.1416 0 0"/>
+      <parent link="root"/>
+      <child link="frame_door_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="0" upper="1.57" effort="0" velocity="0"/>
+    </joint>
+
+    <material name="mat_01">
+      <color rgba="0.1762 0.0907 0.0322 1.0"/>
+    </material>
+
+    <material name="mat_02">
+      <color rgba="0.6 0.6 0.6 1.0"/>
+    </material>
+
+  </robot>
