@@ -1,5 +1,5 @@
 defaults:
-  - env: sawyer_grasp_env
+  - env: sawyer_door_env
 
 show_gui: True
 with_noise: False
