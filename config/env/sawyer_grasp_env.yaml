@@ -1,0 +1,21 @@
+defaults:
+  - sawyer_base_env
+  - cameras: 
+    - view_1
+    - view_2
+
+name: sawyer_grasp_v0
+
+settings:
+  random_obj_position: True
+observation:
+  with_gripper_width: True
+action:
+  with_gripper_width: True
+sawyer_gripper:
+  init_state:
+    gripper_width: 0.090
+
+objects:   
+  square_prism:
+    urdf_path: "data/square_prism/square_prism.urdf"

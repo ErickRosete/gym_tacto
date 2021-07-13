@@ -1,6 +1,9 @@
 defaults:
   - sawyer_base_env
-
+  - cameras: 
+    - view_1
+    - view_2
+    
 name: sawyer_peg_v1
 
 objects:   

@@ -1,5 +1,5 @@
 defaults:
-  - env: sawyer_peg_env
+  - env: sawyer_grasp_env
 
 show_gui: True
 with_noise: False
