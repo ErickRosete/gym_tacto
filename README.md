@@ -1,7 +1,25 @@
 # Gym Tacto 
-Set of PyBullet environmentS for robotic manipulation that can use tactile information
+Set of PyBullet environments for robotic manipulation that can use tactile information
+
+## Installation
+The package was tested using python 3.7 and Ubuntu 20.04 LTS. <br/>
+To install use the package manager [pip](https://pip.pypa.io/en/stable/).
+
+```bash
+$ git clone https://github.com/ErickRosete/gym_tacto.git
+$ cd gym_tacto
+$ pip install -e .
+```
+## Sawyer Grasp Environmet
+TODO description and photo
+[hydra env configuration file](./config/env/sawyer_grasp_env.yaml). 
+
+## Sawyer Door Environmet
+TODO description and photo
+[hydra env configuration file](./config/env/sawyer_door_env.yaml). 
 
 ## Sawyer Peg Environment
+TODO add photo
 The goal of the task is to insert a peg into a box, the environment works similar to Gym from OpenAI environments.
 ```python
 
@@ -20,7 +38,7 @@ def main(cfg):
 if __name__ == "__main__":
     main()
 ```
-The environment observation consists in a dictionary with different values that could be accessed when requested in the [hydra env configuration file](../../config/env/sawyer_base_env.yaml). <br/>
+The environment observation consists in a dictionary with different values that could be accessed when requested in the [hydra env configuration file](./config/env/sawyer_peg_env.yaml). <br/>
 All the possible parameters are listed below
 ```python
         observation_space["position"]
